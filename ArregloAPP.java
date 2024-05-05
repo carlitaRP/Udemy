@@ -5,6 +5,7 @@ public class ArregloAPP {
         arreglo = new long[20]; //crea un arreglo de 20 elementos
         int numElems;//variable que almacena el numero de elementos en el arreglo
         int j; //indice del arreglo 
+        long busqueda; //valor que se busca en el arreglo
 
         //insertar 10 elementos en el arreglo
         arreglo[0] = 77;
@@ -24,6 +25,21 @@ public class ArregloAPP {
             System.out.print(arreglo[j] + " "); //imprime el elemento
         }
         System.out.println("");//salto de linea
+
+        //buscar el elemento 66 en el arreglo
+        busqueda = 14;
+        //busqueda = 66;
+        for(j=0; j<numElems; j++) {
+            if (arreglo[j] == busqueda) { //se encontro el elemento?
+                break; //si, salir del ciclo   
+            }
+        }
+        if (j == numElems) { // ¿se llego al final del arreglo?
+            System.out.println("No se puedo encontrar el elemento: " + busqueda); 
+        } else { 
+            System.out.println("Se encontro el elemento: " + busqueda); 
+            
+        }
 
     }
 }
