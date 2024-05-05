@@ -21,7 +21,7 @@ public class ArregloAPP {
         numElems = 10; //ahora hay 10 elementos en el arreglo
 
         //recorrer el arreglo
-        for(j=0; j<numElems; j++) { 
+        for(j=0; j<numElems; j++) {  
             System.out.print(arreglo[j] + " "); //imprime el elemento
         }
         System.out.println("");//salto de linea
@@ -29,7 +29,7 @@ public class ArregloAPP {
         //buscar el elemento 66 en el arreglo
         busqueda = 14;
         //busqueda = 66;
-        for(j=0; j<numElems; j++) {
+        for(j=0; j<numElems; j++) { //buscar el elemento
             if (arreglo[j] == busqueda) { //se encontro el elemento?
                 break; //si, salir del ciclo   
             }
@@ -39,6 +39,22 @@ public class ArregloAPP {
         } else { 
             System.out.println("Se encontro el elemento: " + busqueda); 
             
+        }
+
+        //eliminar el elemento 55 del arreglo
+        busqueda = 55;
+        for(j=0; j<numElems;j++) { //buscar el elemento
+            if (arreglo[j] == busqueda) { //se encontro el elemento?
+                break; //si, salir del ciclo
+            }
+        }
+        for(int k=j; k<numElems-1; k++) { //mueve los elementos superiores hacia abajo
+            arreglo[k] = arreglo[k+1];
+        }
+        numElems--; //reduce el numero de elementos en el arreglo en 1
+        //imprimir los elementos del arreglo
+        for(j=0; j<numElems; j++) {
+            System.out.print(arreglo[j] + " "); //imprime el elemento
         }
 
     }
